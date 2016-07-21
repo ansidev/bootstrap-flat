@@ -29,7 +29,7 @@
 
     width: 100%;
     margin-bottom: 0;
-    
+
     &:focus {
       z-index: 3;
     }
@@ -59,10 +59,6 @@
 .input-group-btn,
 .input-group .form-control {
   display: table-cell;
-
-  &:not(:first-child):not(:last-child) {
-    border-radius: 0;
-  }
 }
 // Addon and addon wrapper for buttons
 .input-group-addon,
@@ -83,18 +79,15 @@
   text-align: center;
   background-color: @input-group-addon-bg;
   border: 1px solid @input-group-addon-border-color;
-  border-radius: @input-border-radius;
 
   // Sizing
   &.input-sm {
     padding: @padding-small-vertical @padding-small-horizontal;
     font-size: @font-size-small;
-    border-radius: @input-border-radius-small;
   }
   &.input-lg {
     padding: @padding-large-vertical @padding-large-horizontal;
     font-size: @font-size-large;
-    border-radius: @input-border-radius-large;
   }
 
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -104,27 +97,8 @@
   }
 }
 
-// Reset rounded corners
-.input-group .form-control:first-child,
-.input-group-addon:first-child,
-.input-group-btn:first-child > .btn,
-.input-group-btn:first-child > .btn-group > .btn,
-.input-group-btn:first-child > .dropdown-toggle,
-.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  .border-right-radius(0);
-}
 .input-group-addon:first-child {
   border-right: 0;
-}
-.input-group .form-control:last-child,
-.input-group-addon:last-child,
-.input-group-btn:last-child > .btn,
-.input-group-btn:last-child > .btn-group > .btn,
-.input-group-btn:last-child > .dropdown-toggle,
-.input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  .border-left-radius(0);
 }
 .input-group-addon:last-child {
   border-left: 0;

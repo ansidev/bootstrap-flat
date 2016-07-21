@@ -5,7 +5,6 @@
   display: inline-block;
   padding-left: 0;
   margin: @line-height-computed 0;
-  border-radius: @border-radius-base;
 
   > li {
     display: inline; // Remove list-style and block-level defaults
@@ -25,13 +24,6 @@
       > a,
       > span {
         margin-left: 0;
-        .border-left-radius(@border-radius-base);
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        .border-right-radius(@border-radius-base);
       }
     }
   }
@@ -71,6 +63,7 @@
       background-color: @pagination-disabled-bg;
       border-color: @pagination-disabled-border;
       cursor: @cursor-disabled;
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
     }
   }
 }
@@ -80,10 +73,10 @@
 
 // Large
 .pagination-lg {
-  .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+  .pagination-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large);
 }
 
 // Small
 .pagination-sm {
-  .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+  .pagination-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small);
 }
